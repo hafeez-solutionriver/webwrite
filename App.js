@@ -31,7 +31,6 @@ export default function App() {
       } catch (e) {
         console.warn(e);
       } finally {
-        
         setAppIsReady(true);
       }
     }
