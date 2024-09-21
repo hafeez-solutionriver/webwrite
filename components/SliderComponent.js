@@ -13,7 +13,6 @@ export default function SliderComponent({ value, onValueChange, min, max }) {
         value={value}
         onValueChange={onValueChange}
         minimumTrackTintColor="#2A0B37"  
-        
         thumbTintColor='#2A0B37'
         renderThumbComponent={() => (
           <View style={styles.customThumb}>

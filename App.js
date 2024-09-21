@@ -60,6 +60,7 @@ export default function App() {
               paddingHorizontal: 10,
               paddingVertical: 10,
               paddingBottom: 10,
+              backgroundColor:'white'
             },
             headerShown: false,
             tabBarLabelPosition: 'beside-icon',
