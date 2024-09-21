@@ -8,13 +8,13 @@ const Card = ({
   rightText, 
   height, 
   width, 
-  layout = 'sideBySide',  // Default layout as side by side
-  titleFontSize = 36,     // Default font size for title
-  subtitleFontSize = 14   // Default font size for subtitle
+  layout = 'sideBySide',  
+  titleFontSize = 36,     
+  subtitleFontSize = 14   
 }) => {
   return (
     <View style={styles.cardContainer}>
-      {/* Left Section: Icon and Texts */}
+    
       <View style={styles.leftSection}>
         <Image source={icon} style={{ marginRight: 10, height: height, width: width }} />
         <View style={[styles.textContainer, layout === 'row' ? styles.columnLayout : styles.rowLayout]}>
@@ -23,7 +23,7 @@ const Card = ({
         </View>
       </View>
 
-      {/* Right Section: Right Text */}
+     
       <View style={styles.rightSection}>
         <Text style={styles.rightText}>{rightText}</Text>
       </View>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     padding: 10,
     margin: 10,
     backgroundColor: '#FFFFFF',
-    borderRadius: 15,  // Circular corners
+    borderRadius: 15,  
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
@@ -54,11 +54,11 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   rowLayout: {
-    flexDirection: 'row',  // Title and subtitle side by side
+    flexDirection: 'row',  
     alignItems: 'center',
   },
   columnLayout: {
-    flexDirection: 'column',  // Title and subtitle in a row layout
+    flexDirection: 'column', 
     alignItems: 'flex-start',
   },
   title: {

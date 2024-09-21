@@ -7,7 +7,7 @@ export default function HomeScreen() {
 
   return (
     <ScrollView style={styles.container}>
-      {/* Start first 50% of screen from here  */}
+      
       <View style={styles.header}>
         <View style={styles.leftSection}>
           <Image
@@ -73,7 +73,7 @@ export default function HomeScreen() {
         />
         <View style={{alignItems:'center',marginTop:10}}>
       <Text style={styles.nutritionText}>Activity</Text>
-      {/* Remaining consume 50% of the screen */}
+     
       </View>
       <Card
           icon={require('../assets/foot.png')}   
@@ -82,6 +82,7 @@ export default function HomeScreen() {
           rightText="of ≥2500"
           height={49}
           width={30}
+          
         />
       <View style={{alignItems:'center',marginTop:10}}>
       <Text style={styles.nutritionText}>Progress</Text>
@@ -184,7 +185,7 @@ export default function HomeScreen() {
       color: '#99A69D',
     },
   
-    // Block 1 styling
+    
     block1: {
       flexDirection: 'row',
       justifyContent: 'space-around',
@@ -222,7 +223,8 @@ export default function HomeScreen() {
       borderStyle: 'solid',
       padding: moderateScale(2),
       backgroundColor: '#F6F9F7',
-      elevation: moderateScale(3),
+      elevation: moderateScale(5),
+      shadowRadius:moderateScale(5),
     },
     greenCircle: {
       width: scale(63),

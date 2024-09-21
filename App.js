@@ -53,7 +53,7 @@ export default function App() {
     <SafeAreaView style={{ flex: 1 }} onLayout={onLayoutRootView}>
       <NavigationContainer>
         <Tab.Navigator
-      
+   
           screenOptions={({ route }) => ({
             tabBarStyle: {
               justifyContent: 'space-between',
@@ -66,15 +66,21 @@ export default function App() {
             tabBarActiveTintColor: 'black',
             tabBarInactiveTintColor: 'grey',
             tabBarIcon: ({ size, focused, color }) => {
+              
               let icon;
+              // Change icons based on the route and focus state
               if (route.name === 'Home') {
-                icon = require('./assets/home.png');
+                icon = focused 
+                  ? require('./assets/home.png') // Focused icon
+                  : require('./assets/home-inactive.png'); // Unfocused icon
               } else if (route.name === 'Shopping') {
-                icon = require('./assets/shopping.png');
+                icon = require('./assets/shopping.png'); // Same for both states
               } else if (route.name === 'Meal') {
-                icon = require('./assets/meal.png');
+                icon = focused 
+                  ? require('./assets/mealactive.png') // Focused icon
+                  : require('./assets/meal.png'); // Unfocused icon
               } else if (route.name === 'Profile') {
-                icon = require('./assets/profile.png');
+                icon = require('./assets/profile.png'); // Same for both states
               }
 
               return <Image style={{ width: size, height: size }} source={icon} />;
